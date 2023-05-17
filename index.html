@@ -4,287 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protfolio Website</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/2fc2487f02.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Document</title>
   </head>
   <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="images/logo.png" class="logo" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Protfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>Information Systems Graduate</p>
-          <h1>
-            Hi, my name <br />
-            is
-            <span> Ali</span>
-          </h1>
-        </div>
-      </div>
+    <div class="contact">
+      <form id="contactForm" method="POST" action="sendmail.php">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    <!-- ---------------------------about----------------------------------->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="images/mypic.jpg" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              Dedicated Information Systems graduate with experience in data
-              analysis, operating systems and networks. Team player believes in
-              collaboration through group work, sharing knowledge, and learning
-              from others. Self-motivated professional seeking an interest in
-              pursuing an internet technology position with the opportunity to
-              build on my experience with web development and support.
-            </p>
-
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                School Projects
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Web Development</span><br />Designing Web/App interfaces
-                </li>
-                <li>
-                  <span>App Development</span><br />Designing Web/App interfaces
-                </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li>
-                  <span>2021</span><br />Web Development, <br />Designed and
-                  implemented a VPN server <br />hosted on AWS cloud computing.
-                </li>
-                <li><span>2019</span><br />VPN</li>
-                <li><span>2019</span><br />Hierarchical Network Design</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>2021</span><br />B.S. in Business Information System
-                  <br />
-                  San Francisco State University, CA
-                </li>
-                <li>
-                  <span>2019</span><br />Associate of Business Administration,
-                  <br />
-                  concentration in Accounting <br />
-                  Berkeley City College, CA
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="popupForm" style="display: none">
+      <!-- Your form HTMLcode from the previous section here -->
     </div>
-
-    <!-- ---------------leave-out---------------services
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-              alias ducimus dolores architecto quas asperiores consectetur hic
-              magnam, iure voluptatibus corrupti. Cum, fugit! Ad, quibusdam
-              eaque. Sapiente itaque animi similique.
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-          <div>
-            <i class="fa-sharp fa-solid fa-crop"></i>
-            <h2>UI/UX Design</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-              alias ducimus dolores architecto quas asperiores consectetur hic
-              magnam, iure voluptatibus corrupti. Cum, fugit! Ad, quibusdam
-              eaque. Sapiente itaque animi similique.
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-          <div>
-            <i class="fa-brands fa-app-store-ios"></i>
-            <h2>App design</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-              alias ducimus dolores architecto quas asperiores consectetur hic
-              magnam, iure voluptatibus corrupti. Cum, fugit! Ad, quibusdam
-              eaque. Sapiente itaque animi similique.
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </div>
----------------------->
-    <!-- ------------------------------portfolio----------------------------->
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="images/work-1.png" />
-            <div class="layer">
-              <h3>Web Development</h3>
-              <p>Designed and developt an awesome website</p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-2.png" />
-            <div class="layer">
-              <h3>VPN</h3>
-              <p>
-                Designed and implemented VPN server hosted on AWS cloud
-                computing
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-3.png" />
-            <div class="layer">
-              <h3>Water Irrigation System (IoT)</h3>
-              <p>
-                Integrating and automating an array of sensors and IoT devices
-                to design an affordable irrigation system. <br />
-                Troubleshot issues arising during installation and the use of
-                the irrigation system. <br />
-                Analyzed network hierarchy feature
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="btn">See more</a>
-      </div>
-    </div>
-
-    <!-- ----------------------------contact info---------------------------->
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-              <i class="fa-brands fa-linkedin"></i> www.linkedin.com/in/alboraqi
-            </p>
-            <p><i class="fa-solid fa-paper-plane"></i> alboraqi@outlook.com</p>
-            <p><i class="fa-solid fa-phone"></i> 510-904-2453</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/alboraqi/"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href=""><i class="fa-regular fa-at"></i></a>
-              <a href=""><i class="fa-solid fa-phone"></i></a>
-            </div>
-            <a href="images/MyResume2023.pdf" download class="btn btn2"
-              >Download CV</a
-            >
-          </div>
-          <!------------------------right side contact form-------------------------->
-          <div class="contact-right">
-            <form
-              method="POST"
-              action="https://formspree.io/alboraqi@outlook.com"
-            >
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- ----------------------------java--------------------------->
-      <div class="copyright">
-        <p>Copyright <i class="fa-solid fa-heart"></i> Ali</p>
-      </div>
-    </div>
-    <!-- ----------------------------java--------------------------->
     <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          // Your validation code here
+          if (!isValid) {
+            event.preventDefault();
+          }
+        });
     </script>
-
-    <!-- -------------------java for open and close menu in mobile view------------>
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-
-    <!-- -------this is for the contact form 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwpsVFxgzzIePkF2MdeI9qLpYnyHAeklEydzVy4gHU3tyDs6eo6YIXlftTQWhSTO-yltA/exec";
-      const form = document.forms["submit-to-google-sheet"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-    -->
   </body>
 </html>
